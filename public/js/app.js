@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) =>{
         headers: {'Content-Type': 'application/json'}
     }).then(res => res.json())
     .then(json => {
-            message.textContent = json
+            message.textContent = JSON.stringify(json)
     
     });
 })
