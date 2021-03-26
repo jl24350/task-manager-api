@@ -24,6 +24,6 @@ form.addEventListener('submit', (e) =>{
     }).then(res => res.json())
     .then(json => {
         console.log(JSON.stringify(json))
-        document.location.href = "/createTask/createTask.html"
+        // document.location.href = "/createTask/createTask.html"
     });
 })
