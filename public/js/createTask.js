@@ -1,7 +1,7 @@
 const description = document.querySelector('#description')
 const form = document.querySelector('#form2')
 const message = document.querySelector('#message2')
-const form1 = document.querySelector('#from1')
+const form1 = document.querySelector('#form1')
 const email = document.querySelector('#email')
 const password = document.querySelector('password')
 
@@ -20,7 +20,7 @@ form1.addEventListener('submit', (e) =>{
         message.textContent = JSON.stringify(json)
     })
 
-} )
+})
 
 
 form.addEventListener('submit', (e) =>{
