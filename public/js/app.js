@@ -6,13 +6,10 @@ const form = document.querySelector('form')
 const message = document.querySelector('#message')
 const formData = new FormData();
 
-formData.append('name', 'this is a test')
-formData.append('email', 'ledesmajorge07@gmail.com')
-formData.append('password', 'conecone123')
 let x = {
-    name: 'jorge ledesma',
-    email: 'ledesmajorge07@gmail.com',
-    password: 'conecone123'
+    name: n.value,
+    email: email.value,
+    password: password.value
 }
 
 form.addEventListener('submit', (e) =>{
