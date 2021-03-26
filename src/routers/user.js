@@ -17,9 +17,6 @@ const upload = multer({
     }
 })
 
-router.get('/test', (req, res) =>{
-    res.send('From a new file')
-})
 
 router.post('/users', async (req, res) =>{
     const user = new User(req.body)
@@ -73,7 +70,7 @@ router.get('/users/me/avatar', auth, async (req,res) =>{
     }
 })
 
-router.post('users/logout', auth, async (req,res) =>{
+router.post('/users/logout', auth, async (req,res) =>{
     try{
         req.user.tokens = req.user.tokens.filter((token) =>{
             return token.token !== req.token
@@ -86,7 +83,7 @@ router.post('users/logout', auth, async (req,res) =>{
 
 })
 
-router.post('users/logoutAll', auth, async(req,res) =>{
+router.post('/users/logoutAll', auth, async(req,res) =>{
     try{
         req.user.tokens =[]
         res.send()
