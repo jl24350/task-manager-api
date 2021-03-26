@@ -1,4 +1,3 @@
-const { response } = require("express")
 
 const n = document.querySelector('#Name')
 const email = document.querySelector('#Email')
