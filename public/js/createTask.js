@@ -10,7 +10,7 @@ form.addEventListener('submit', (e) =>{
     }
 
     e.preventDefault()
-    fetch('/task', {
+    fetch('/tasks', {
         method: 'POST',
         body: JSON.stringify(x),
         headers: {'Content-Type': 'application/json'}
