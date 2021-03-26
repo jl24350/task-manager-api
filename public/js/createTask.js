@@ -1,5 +1,3 @@
-const { json } = require("express")
-
 const description = document.querySelector('#description')
 const form = document.querySelector('#form2')
 const message = document.querySelector('#message2')
