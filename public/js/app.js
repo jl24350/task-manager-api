@@ -10,12 +10,11 @@ const formData = new FormData();
 
 form.addEventListener('submit', (e) =>{
 
-    let x = {
+    const x = {
         name: n.value,
         email: email.value,
         password: password.value
     }
-    console.log(x)
 
     e.preventDefault()
     fetch('/users', {
@@ -23,5 +22,8 @@ form.addEventListener('submit', (e) =>{
         body: JSON.stringify(x),
         headers: {'Content-Type': 'application/json'}
     }).then(res => res.json())
-    .then(json => console.log(json));
+    .then(json => {
+            message.textContent = json
+    
+    });
 })
