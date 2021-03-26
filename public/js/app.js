@@ -23,7 +23,6 @@ form.addEventListener('submit', (e) =>{
         headers: {'Content-Type': 'application/json'}
     }).then(res => res.json())
     .then(json => {
-            message.textContent = JSON.stringify(json)
-    
+        document.location.href = "/createTask/createTask.html"
     });
 })
