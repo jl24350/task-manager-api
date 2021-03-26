@@ -6,9 +6,9 @@ const form = document.querySelector('form')
 const message = document.querySelector('#message')
 const formData = new FormData();
 
-formData.append('name', n.value)
-formData.append('email', email.value)
-formData.append('password', password.value)
+formData.append('name', 'this is a test')
+formData.append('email', 'ledesmajorge07@gmail.com')
+formData.append('password', 'conecone123')
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
