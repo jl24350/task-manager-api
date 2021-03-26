@@ -9,6 +9,8 @@ const message1 = document.querySelector('#message1')
 
 form1.addEventListener('submit', (e) =>{
 
+    e.preventDefault()
+
     const x = {
         email : email.value,
         password :  password.value
