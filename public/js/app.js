@@ -1,16 +1,18 @@
 
-const n = document.querySelector('#Name')
-const email = document.querySelector('#Email')
-const password = document.querySelector('#Password')
+const n = document.getElementById('#Name').value
+const email = document.getElementById('#Email').value
+const password = document.getElementById('#Password').value
 const form = document.querySelector('form')
 const message = document.querySelector('#message')
 const formData = new FormData();
 
+
 let x = {
-    name: n.value,
-    email: email.value,
-    password: password.value
+    name: n,
+    email: email,
+    password: password
 }
+console.log(x)
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
