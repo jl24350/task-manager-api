@@ -1,9 +1,10 @@
 const description = document.querySelector('#description')
 const form = document.querySelector('#form2')
-const message = document.querySelector('#message2')
+const message = document.querySelector('#message')
 const form1 = document.querySelector('#form1')
 const email = document.querySelector('#email')
 const password = document.querySelector('password')
+const message1 = document.querySelector('#message1')
 
 
 form1.addEventListener('submit', (e) =>{
@@ -17,7 +18,7 @@ form1.addEventListener('submit', (e) =>{
         body: JSON.stringify(x),
         headers:{'Content-Type': 'application/json'}
     }).then(res => res.json()).then(json =>{
-        message.textContent = JSON.stringify(json)
+        message1.textContent = JSON.stringify(json)
     })
 
 })
