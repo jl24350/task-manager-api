@@ -9,6 +9,7 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault()
 
     fetch('/users',{
+        method: 'POST',
         name: n.value,
         email: email.value,
         password: password.value
