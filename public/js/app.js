@@ -14,7 +14,11 @@ form.addEventListener('submit', (e) =>{
     e.preventDefault()
     fetch('https://jledesma-task-manager.herokuapp.com/users', {
         method: 'POST',
-        body: formData
+        body: {
+            "name" : 'jorge ledesma',
+            "email" : 'jledesma@eagles.bridgewater.edu',
+            "password": 'jljljl1231'
+        }
     }).then(res => res.json())
     .then(json => console.log(json));
 })
