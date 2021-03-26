@@ -12,7 +12,7 @@ formData.append('password', password.value)
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
-    fetch('/users',{
+    fetch('https://jledesma-task-manager.herokuapp.com/users', {
         method: 'POST',
         body: formData
     }).then((response) =>{
