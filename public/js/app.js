@@ -15,9 +15,6 @@ form.addEventListener('submit', (e) =>{
     fetch('https://jledesma-task-manager.herokuapp.com/users', {
         method: 'POST',
         body: formData
-    }).then((response) =>{
-        response.json().then((data) =>{
-            message.textContent = data
-        })
-    })
+    }).then(res => res.json())
+    .then(json => console.log(json));
 })
