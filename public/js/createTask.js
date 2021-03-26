@@ -3,7 +3,7 @@ const form = document.querySelector('#form2')
 const message = document.querySelector('#message')
 const form1 = document.querySelector('#form1')
 const email = document.querySelector('#email')
-const password = document.querySelector('password')
+const password = document.querySelector('#password')
 const message1 = document.querySelector('#message1')
 
 
