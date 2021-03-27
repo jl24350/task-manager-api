@@ -66,7 +66,7 @@ const populateList = () => {
             var checkBox = document.createElement('input').setAttribute('type','checkbox')
             var task = document.createElement('p')
             task.textContent = json[i].description
-            task.appendChild(checkBox)
+            list.appendChild(checkBox)
             list.appendChild(li)
         }
     })
