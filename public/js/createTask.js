@@ -6,6 +6,8 @@ const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const message1 = document.querySelector('#message1')
 
+let token;
+
 
 form1.addEventListener('submit', (e) =>{
 
@@ -20,7 +22,7 @@ form1.addEventListener('submit', (e) =>{
         body: JSON.stringify(x),
         headers:{'Content-Type': 'application/json'}
     }).then(res => res.json()).then(json =>{
-        message1.textContent = json.token
+        token = json.token
     })
 
 })
@@ -36,7 +38,10 @@ form.addEventListener('submit', (e) =>{
     fetch('/tasks', {
         method: 'POST',
         body: JSON.stringify(x),
-        headers: {'Content-Type': 'application/json'}
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
     }).then(res => res.json())
     .then(json => {
        message.textContent = JSON.stringify(json)
