@@ -20,7 +20,7 @@ form1.addEventListener('submit', (e) =>{
         body: JSON.stringify(x),
         headers:{'Content-Type': 'application/json'}
     }).then(res => res.json()).then(json =>{
-        message1.textContent = JSON.stringify(json)
+        message1.textContent = json.token
     })
 
 })
