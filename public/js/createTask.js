@@ -28,6 +28,7 @@ form1.addEventListener('submit', (e) =>{
         form1.remove()
         token = json.token
         form.style.visibility = "visible"
+        populateList()
     })
 
 })
@@ -63,6 +64,6 @@ const populateList = () => {
     }).then(res => res.json()).then(json => {
         var li = document.createElement('li')
         li.textContent = json
-        URL.appendChild(li)
+        list.appendChild(li)
     })
 }
