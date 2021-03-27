@@ -5,6 +5,7 @@ const form1 = document.querySelector('#form1')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const message1 = document.querySelector('#message1')
+const list = document.querySelector('ul')
 
 let token;
 
@@ -26,6 +27,7 @@ form1.addEventListener('submit', (e) =>{
     }).then(res => res.json()).then(json =>{
         form1.remove()
         token = json.token
+        form.style.visibility = "visible"
     })
 
 })
@@ -50,3 +52,17 @@ form.addEventListener('submit', (e) =>{
        message.textContent = JSON.stringify(json)
     });
 })
+
+const populateList = () => {
+    fetch('/tasks', {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    }).then(res => res.json()).then(json => {
+        var li = document.createElement('li')
+        li.textContent = json
+        URL.appendChild(li)
+    })
+}
