@@ -65,6 +65,11 @@ const populateList = () => {
         for(let i = 0; i < json.length; i++){
             var checkBox = document.createElement('input')
             checkBox.setAttribute('type','checkbox')
+            checkBox.addEventListener('change', function() {
+                if(this.checked){
+                    console.log("This is checked")
+                }
+            })
             var task = document.createElement('p')
             task.textContent = json[i].description
             task.appendChild(checkBox)
