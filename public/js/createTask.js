@@ -64,10 +64,11 @@ const populateList = () => {
     }).then(res => res.json()).then(json => {
         for(let i = 0; i < json.length; i++){
             var checkBox = document.createElement('input')
+            checkBox.setAttribute('type','checkbox')
             var task = document.createElement('p')
             task.textContent = json[i].description
             list.appendChild(checkBox)
-            list.appendChild(li)
+            list.appendChild(task)
         }
     })
 }
