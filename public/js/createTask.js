@@ -49,7 +49,7 @@ form.addEventListener('submit', (e) =>{
         }
     }).then(res => res.json())
     .then(json => {
-       message.textContent = JSON.stringify(json)
+       populateList()
     });
 })
 
