@@ -8,6 +8,7 @@ const message1 = document.querySelector('#message1')
 const list = document.querySelector('#taskList')
 
 let token;
+let id;
 
 form.style.visibility = "hidden"
 
@@ -27,6 +28,7 @@ form1.addEventListener('submit', (e) =>{
     }).then(res => res.json()).then(json =>{
         form1.remove()
         token = json.token
+        id = json.id
         form.style.visibility = "visible"
         populateList()
     })
@@ -81,5 +83,15 @@ const populateList = () => {
 const deleteTask = (task) =>{
     setTimeout(function (){
         task.remove()
-    },3000)
+        fetch('/tasks',{
+            method: 'DELETE',
+            body: {description: task.textContent},
+            headers:{
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            }
+        }).then(res => res.json()).then(json => {
+            populateList()
+        })
+    },1000)
 }
