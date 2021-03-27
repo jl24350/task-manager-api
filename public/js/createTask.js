@@ -8,6 +8,8 @@ const message1 = document.querySelector('#message1')
 
 let token;
 
+form.style.visibility = "hidden"
+
 
 form1.addEventListener('submit', (e) =>{
 
