@@ -5,7 +5,7 @@ const form1 = document.querySelector('#form1')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const message1 = document.querySelector('#message1')
-const list = document.querySelector('ul')
+const list = document.querySelector('#taskList')
 
 let token;
 
@@ -64,9 +64,9 @@ const populateList = () => {
     }).then(res => res.json()).then(json => {
         for(let i = 0; i < json.length; i++){
             var checkBox = document.createElement('input').setAttribute('type','checkbox')
-            var li = document.createElement('li')
-            li.textContent = json[i].description
-            li.appendChild(checkBox)
+            var task = document.createElement('p')
+            task.textContent = json[i].description
+            task.appendChild(checkBox)
             list.appendChild(li)
         }
     })
