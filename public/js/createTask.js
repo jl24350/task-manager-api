@@ -85,7 +85,7 @@ const deleteTask = (task) =>{
         task.remove()
         fetch('/tasks',{
             method: 'DELETE',
-            body: {description: task.textContent},
+            body: JSON.stringify({ description: task.textContent }),
             headers:{
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
