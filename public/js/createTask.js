@@ -62,8 +62,10 @@ const populateList = () => {
             'Authorization': 'Bearer ' + token
         }
     }).then(res => res.json()).then(json => {
-        var li = document.createElement('li')
-        li.textContent = JSON.stringify(json)
-        list.appendChild(li)
+        for(let i = 0; i < json.length; i++){
+            var li = document.createElement('li')
+            li.textContent = json[i].description
+            list.appendChild(li)
+        }
     })
 }
