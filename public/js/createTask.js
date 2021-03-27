@@ -67,7 +67,7 @@ const populateList = () => {
             checkBox.setAttribute('type','checkbox')
             checkBox.addEventListener('change', function() {
                 if(this.checked){
-                    console.log("This is checked")
+                    deleteTask(this.parentElement)
                 }
             })
             var task = document.createElement('p')
@@ -76,4 +76,8 @@ const populateList = () => {
             list.appendChild(task)
         }
     })
+}
+
+const deleteTask = (task) =>{
+    task.remove()
 }
