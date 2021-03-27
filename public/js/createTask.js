@@ -63,7 +63,7 @@ const populateList = () => {
         }
     }).then(res => res.json()).then(json => {
         var li = document.createElement('li')
-        li.textContent = json
+        li.textContent = JSON.stringify(json)
         list.appendChild(li)
     })
 }
