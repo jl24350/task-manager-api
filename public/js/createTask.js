@@ -79,5 +79,7 @@ const populateList = () => {
 }
 
 const deleteTask = (task) =>{
-    task.remove()
+    setTimeout(function (){
+        task.remove()
+    },3000)
 }
