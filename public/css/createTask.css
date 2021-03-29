@@ -1,7 +1,7 @@
 html{
     font-family: "Lucida Console", "Courier New", monospace;
 }
-input, button {
+input[type=text], button {
     
     text-align: center;
     width: 50%;
