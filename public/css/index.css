@@ -18,3 +18,16 @@ input, button {
   button{
       background-color: cornflowerblue;
   }
+  header, footer{
+    width: 100%;
+    position: fixed;        
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+  }
+  header{
+      top: 0;
+  }
+  footer{
+      bottom: 0;
+  }
