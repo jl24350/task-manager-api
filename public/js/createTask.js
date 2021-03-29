@@ -91,7 +91,7 @@ const deleteTask = (task) =>{
                 'Authorization': 'Bearer ' + token
             }
         }).then(res => res.json()).then(json => {
-            populateList()
+           
         })
     },1000)
 }
