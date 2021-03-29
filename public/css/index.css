@@ -22,13 +22,16 @@ input, button {
   header, footer{
     width: 100%;
     position: fixed;        
-    background: #E0E0E0;
+    background: whitesmoke;
+    display: block;
   }
   header{
       top: 0;
+      left: 0;
   }
   footer{
       bottom: 0;
+      left: 0;
   }
   img{
       height: 2%;
