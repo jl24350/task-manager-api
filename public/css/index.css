@@ -1,5 +1,8 @@
-input, button {
+html{
     font-family: "Lucida Console", "Courier New", monospace;
+}
+input, button {
+    
     text-align: center;
     width: 50%;
     padding: 12px 20px;
@@ -15,7 +18,6 @@ input, button {
   }
   form{
       text-align: center;
-      font-family: "Lucida Console", "Courier New", monospace;
       padding-top: 10%;
   }
   button{
@@ -38,6 +40,7 @@ input, button {
       bottom: 0;
       left: 0;
       text-align: center;
+      
   }
   img{
       height: 2%;
