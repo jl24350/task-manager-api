@@ -14,7 +14,7 @@ input, button {
   }
   form{
       text-align: center;
-      padding-top: 20%;
+      padding-top: 10%;
   }
   button{
       background-color: cornflowerblue;
@@ -32,8 +32,10 @@ input, button {
   footer{
       bottom: 0;
       left: 0;
+      text-align: center;
   }
   img{
       height: 2%;
       width: 2%;
+      padding: 5px;
   }
