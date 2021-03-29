@@ -21,8 +21,7 @@ input, button {
   header, footer{
     width: 100%;
     position: fixed;        
-    background: gray;
-    color: #fff;
+    background: #E0E0E0;
   }
   header{
       top: 0;
