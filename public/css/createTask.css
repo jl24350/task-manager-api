@@ -23,9 +23,6 @@ input, button {
   button{
       background-color: cornflowerblue;
   }
-  #signIn{
-      background-color: tomato;
-  }
   header, footer{
     width: 100%;
     position: fixed;        
