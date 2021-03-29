@@ -14,6 +14,7 @@ input, button {
   }
   form{
       text-align: center;
+      padding-top: 5px;
   }
   button{
       background-color: cornflowerblue;
