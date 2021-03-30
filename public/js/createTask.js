@@ -32,7 +32,6 @@ deleteAccount.addEventListener('click',(e) => {
     e.preventDefault()
     fetch('/users/me', {
         method: 'DELETE',
-        body: 
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
