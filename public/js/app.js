@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) =>{
     }).then(res => res.json())
     .then(json => {
         console.log(JSON.stringify(json))
-        if(json.body.error){
+        if(JSON.stringify(json).includes('errors')){
             throw Error()
         }
          document.location.href = "/createTask/createTask.html"
