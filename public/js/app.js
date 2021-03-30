@@ -4,6 +4,7 @@ const email = document.querySelector('#Email')
 const password = document.querySelector('#Password')
 const form = document.querySelector('form')
 const message = document.querySelector('#message')
+const signInForm = document.querySelector('#signInForm')
 const formData = new FormData();
 
 
@@ -35,4 +36,8 @@ form.addEventListener('submit', (e) =>{
            error.remove()
        },2000)
     })
+})
+
+signInForm.addEventListener('submit', (e) => {
+    window.location.href('./createTask/createTask.html')
 })
