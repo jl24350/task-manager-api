@@ -81,7 +81,7 @@ const populateList = () => {
 }
 
 const deleteTask = (task) =>{
-    document.write(task.strike())
+    document.write(task.textContent.strike())
     setTimeout(function (){
         task.remove()
         fetch('/tasks',{
