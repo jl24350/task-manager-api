@@ -24,11 +24,11 @@ form.addEventListener('submit', (e) =>{
     }).then(res => res.json())
     .then(json => {
         console.log(JSON.stringify(json))
-        if(!json){
+        if(json.body.error){
             throw Error()
         }
         // document.location.href = "/createTask/createTask.html"
     }).catch((e) =>{
-        console.log(e)
+        console.log('This is from the catch')
     })
 })
