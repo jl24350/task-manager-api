@@ -23,7 +23,6 @@ form.addEventListener('submit', (e) =>{
         headers: {'Content-Type': 'application/json'}
     }).then(res => res.json())
     .then(json => {
-        console.log(JSON.stringify(json))
         if(JSON.stringify(json).includes('errors')){
             throw Error()
         }
@@ -32,5 +31,8 @@ form.addEventListener('submit', (e) =>{
        let error = document.createElement('p')
        error.textContent = "Improper login credentials, try again"
        form.appendChild(error)
+       setTimeout(function (){
+           error.remove()
+       },2000)
     })
 })
