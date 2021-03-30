@@ -37,11 +37,9 @@ form1.addEventListener('submit', (e) =>{
 
 
 form.addEventListener('submit', (e) =>{
-
     const x = {
         description : description.value
     }
-
     e.preventDefault()
     fetch('/tasks', {
         method: 'POST',
@@ -65,6 +63,7 @@ const populateList = () => {
             'Authorization': 'Bearer ' + token
         }
     }).then(res => res.json()).then(json => {
+        removeAllChildNodes(list)
         for(let i = 0; i < json.length; i++){
             var checkBox = document.createElement('input')
             checkBox.setAttribute('type','checkbox')
