@@ -38,7 +38,7 @@ deleteAccount.addEventListener('click',(e) => {
         }
     }).then(res => res.json()).then(json => {
         from1.innerHTML = "Your Account Has Been Deleted"
-        setTimeout(function () =>{
+        setTimeout(function (){
             location.reload()
         },3000)
     }).catch((e) =>{
