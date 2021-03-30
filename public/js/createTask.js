@@ -23,23 +23,16 @@ logout.addEventListener('click', (e) => {
     location.reload()
 })
 
-createAccount.addEventListener('click',(e) {
+createAccount.addEventListener('click',(e) => {
     e.preventDefault()
     document.location.href = "../index.html"
 })
 
 deleteAccount.addEventListener('click',(e) => {
     e.preventDefault()
-
-})
-
-
-form1.addEventListener('submit', (e) =>{
-
-    e.preventDefault()
     fetch('/users/me', {
         method: 'DELETE',
-        body: JSON.stringify(x),
+        body: 
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
@@ -48,6 +41,13 @@ form1.addEventListener('submit', (e) =>{
     }).catch((e) =>{
         console.log(e)
     })
+
+})
+
+
+form1.addEventListener('submit', (e) =>{
+
+    e.preventDefault()
 
     const x = {
         email : email.value,
