@@ -50,10 +50,11 @@ form.addEventListener('submit', (e) =>{
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + token
         }
-    }).then(res => res.json())
-    .then(json => {
+    }).then(res => res.json()).then(json => {
        populateList()
-    });
+    }).catch((e) =>{
+        console.log(e)
+    })
 })
 
 const populateList = () => {
