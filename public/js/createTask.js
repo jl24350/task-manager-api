@@ -49,6 +49,7 @@ form.addEventListener('submit', (e) =>{
             'Authorization': 'Bearer ' + token
         }
     }).then(res => res.json()).then(json => {
+        description.textContent = ''
         list.innerHTML = ''
        populateList()
     }).catch((e) =>{
