@@ -27,7 +27,9 @@ form.addEventListener('submit', (e) =>{
             throw Error()
         }
          document.location.href = "/createTask/createTask.html"
-    }).catch((e) =>{
-        console.log('This is from the catch')
+    }).catch(() =>{
+       let error = document.createElement('p')
+       error.textContent = "Improper login credentials, try again"
+       form.appendChild(error)
     })
 })
