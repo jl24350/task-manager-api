@@ -39,5 +39,5 @@ form.addEventListener('submit', (e) =>{
 
 signInForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    window.location.href('./createTask/createTask.html')
+    document.location.href('./createTask/createTask.html')
 })
