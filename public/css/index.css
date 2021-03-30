@@ -1,21 +1,7 @@
 html{
     font-family: "Lucida Console", "Courier New", monospace;
 }
-#menu{
-    padding-top: 10%;
-}
-#logoutButton, #createAccountButton, #deleteButton{
-    text-align: center;
-    width: 20%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: orange;
-} 
-input, #login, #create {
+input, button {
     
     text-align: center;
     width: 50%;
@@ -31,12 +17,10 @@ input, #login, #create {
       display: block;
   }
   form{
-       text-align: center;
-  }
-  #form1{
+      text-align: center;
       padding-top: 10%;
   }
- #login, #create{
+  button{
       background-color: cornflowerblue;
   }
   #signInButton{
