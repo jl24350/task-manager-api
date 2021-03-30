@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) =>{
     }).catch(() =>{
        let error = document.createElement('p')
        error.textContent = "Improper login credentials, try again"
-       document.body.appendChild(error)
+       signInForm.appendChild(error)
        setTimeout(function (){
            error.remove()
        },2000)
