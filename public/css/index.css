@@ -16,7 +16,7 @@ input, button {
       content: " ";
       display: block;
   }
-  form{
+  #form1{
       text-align: center;
       padding-top: 10%;
   }
