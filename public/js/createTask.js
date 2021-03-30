@@ -6,16 +6,48 @@ const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const message1 = document.querySelector('#message1')
 const list = document.querySelector('#taskList')
+const logout = document.querySelector('#logoutButton')
+const createAccount = document.querySelector('#createAccountButton')
+const deleteAccount = document.querySelector('#deleteButton')
 
 let token;
 let id;
 
 form.style.visibility = "hidden"
+logout.style.visibility = "hidden"
+deleteAccount.style.visibility = "hidden"
+
+
+logout.addEventListener('click', (e) => {
+    e.preventDefault()
+    location.reload()
+})
+
+createAccount.addEventListener('click',(e) {
+    e.preventDefault()
+    document.location.href = "../index.html"
+})
+
+deleteAccount.addEventListener('click',(e) => {
+    e.preventDefault()
+
+})
 
 
 form1.addEventListener('submit', (e) =>{
 
     e.preventDefault()
+    fetch('/users/me', {
+        method: 'DELETE',
+        body: JSON.stringify(x),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    }).then(res => res.json()).then(json => {
+    }).catch((e) =>{
+        console.log(e)
+    })
 
     const x = {
         email : email.value,
@@ -30,6 +62,8 @@ form1.addEventListener('submit', (e) =>{
         token = json.token
         id = json.id
         form.style.visibility = "visible"
+        logout.style.visibility = "visible"
+        deleteAccount.style.visibility = "visible"
         populateList()
     })
 
