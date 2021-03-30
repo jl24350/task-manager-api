@@ -27,7 +27,7 @@ form.addEventListener('submit', (e) =>{
         if(!json){
             throw Error()
         }
-         document.location.href = "/createTask/createTask.html"
+        // document.location.href = "/createTask/createTask.html"
     }).catch((e) =>{
         console.log(e)
     })
