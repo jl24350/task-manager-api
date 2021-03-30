@@ -23,11 +23,10 @@ form.addEventListener('submit', (e) =>{
         headers: {'Content-Type': 'application/json'}
     }).then(res => res.json())
     .then(json => {
-        console.log(JSON.stringify(json))
         if(json.body.error){
             throw Error()
         }
-        // document.location.href = "/createTask/createTask.html"
+         document.location.href = "/createTask/createTask.html"
     }).catch((e) =>{
         console.log('This is from the catch')
     })
