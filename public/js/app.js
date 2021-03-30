@@ -11,6 +11,11 @@ const formData = new FormData();
 
 form.addEventListener('submit', (e) =>{
 
+    signInForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        window.location.href('./createTask/createTask.html')
+    })
+
     const x = {
         name: n.value,
         email: email.value,
@@ -36,8 +41,4 @@ form.addEventListener('submit', (e) =>{
            error.remove()
        },2000)
     })
-})
-
-signInForm.addEventListener('submit', (e) => {
-    window.location.href('./createTask/createTask.html')
 })
