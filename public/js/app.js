@@ -29,7 +29,7 @@ form.addEventListener('submit', (e) =>{
          document.location.href = "/createTask/createTask.html"
     }).catch(() =>{
        let error = document.createElement('p')
-       error.textContent = "Improper login credentials, try again"
+       error.textContent = "Improper credentials, try again"
        signInForm.appendChild(error)
        setTimeout(function (){
            error.remove()
