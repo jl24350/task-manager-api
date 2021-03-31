@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) =>{
        signInForm.appendChild(error)
        setTimeout(function (){
            error.remove()
-       },2000)
+       },3000)
     })
 })
 
