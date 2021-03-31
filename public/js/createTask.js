@@ -38,11 +38,8 @@ deleteAccount.addEventListener('click',(e) => {
         }
     }).then(res => res.json()).then(json => {
         form2.innerHTML = 'Your Account Has Been Deleted'
-        const deleteNote = document.createElement('p')
-        p.textContent = "Your Account Has Been Deleted"
-        setTimeout(function(){
-            document.location.href = "../index.html"
-        },200)
+        logout.style.visibility = "hidden"
+        deleteAccount.style.visibility = "hidden"
     }).catch((e) =>{
     })
 
@@ -86,7 +83,7 @@ form.addEventListener('submit', (e) =>{
             'Authorization': 'Bearer ' + token
         }
     }).then(res => res.json()).then(json => {
-        description.textContent = ''
+       description.value = ""
         list.innerHTML = ''
        populateList()
     }).catch((e) =>{
