@@ -37,13 +37,9 @@ deleteAccount.addEventListener('click',(e) => {
             'Authorization': 'Bearer ' + token
         }
     }).then(res => res.json()).then(json => {
-        form2.innerHTML = ''
+        form2.innerHTML = 'Your Account Has Been Deleted'
         const deleteNote = document.createElement('p')
         p.textContent = "Your Account Has Been Deleted"
-        form2.appendChild(deleteNote)
-        setTimeout(function (){
-            location.reload()
-        },2000)
     }).catch((e) =>{
     })
 
