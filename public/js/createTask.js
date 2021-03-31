@@ -40,6 +40,9 @@ deleteAccount.addEventListener('click',(e) => {
         form2.innerHTML = 'Your Account Has Been Deleted'
         const deleteNote = document.createElement('p')
         p.textContent = "Your Account Has Been Deleted"
+        setTimeout(function(){
+            document.location.href = "../index.html"
+        },200)
     }).catch((e) =>{
     })
 
